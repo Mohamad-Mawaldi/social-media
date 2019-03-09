@@ -33,4 +33,14 @@
     border-bottom: none;
     /* fix the border */
 }
+.round{
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    font-size: 20px;
+    background-color: #d7527c;
+    color: #fff;
+}
 
