@@ -1,45 +1,39 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import PostList from '../post/postList';
+import PostList from "../post/postList";
+import AddPost from "./addPost";
+
 //connect the router
 
-const DashBoard = () => {
-  return (
+export default class DashBoard extends Component {
+
+    state={
+        posts:[
+        {title:'First Post', id: '1', content:'First post my friends', author:'MM', status:'Good'},
+        {title:'Seconde Post', id: '2', content:'Seconde Post post my friends', author:'MX', status:'Not Good'},
+        {title:'Third Post', id: '3', content:'Third Post post my friends', author:'WA', status:'Great'},
+        {title:'Fourth Post', id: '4', content:'Fourth Post post my friends', author:'NR', status:'Bad'}]
+    }
+
+     addPost = ([title,content,author]) => {
+        console.log('called');
+        console.log('post', [title,content,author]);
+        this.state.posts.push([title,content,author]);
+        console.log('posts', this.state)
+    }
+
+
+  render() {
+    return (
       <div className="hight">
-       <div className="container">
-       <div className="new-post">
-
-            <div className=" col-md-5 mx-auto">
-            
-                <div className="form-group row">
-                    <div className="mt-3"><h4>Add New Post</h4></div>
-                </div>
-
-                <div className="form-group row">
-                    <input  placeholder="Enter Title here" className="form-control" type="text" />
-                </div>
-
-                <div className="form-group row">
-                    <textarea  rows="2" className="form-control" placeholder="Enter Content here"/>
-                </div>
-                <button type="button" className="btn btn-primary btn-lg btn-block">Add</button>
-            </div>
-       </div>
-
-       <div className=" col-md-7 mx-auto">
-    <PostList/>
-    </div>
-    <div className="push" />
-</div>
-</div>
-
-
-  );
-};
-export default DashBoard;
-
-
-
-
-
-                  
+        <div className="container">
+          <AddPost addPost={this.addPost} />
+          <div className=" col-md-7 mx-auto">
+            <PostList posts={this.state.posts}  />
+          </div>
+          <div className="push" />
+        </div>
+      </div>
+    );
+  }
+}
