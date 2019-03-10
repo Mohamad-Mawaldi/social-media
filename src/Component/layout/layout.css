@@ -22,10 +22,12 @@
   text-align: center;
 }
 .footer {
-  width: 100%;
-  padding: 10px 0px 25px 0px;
+  padding: 20px 0px 25px 0px;
   color: #ccc;
-
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  position: fixed;
 }
 .logo-link{
     color: #ccc;
@@ -33,8 +35,7 @@
 }
 .logo-link:hover{
     color: #ccc;
-    border-bottom: none;
-    /* fix the border */
+    text-decoration: none;
 }
 .round{
     height: 50px;
@@ -44,7 +45,25 @@
     border-radius: 25px;
     font-size: 20px;
     background-color: #e65f8a;
-    color: #fff;
+    color: #fff; 
+
 }
+a{
+  text-decoration: none;
+  color: #fff !important;
+
+}
+a:hover {
+  text-decoration: none;
+  color: #fff; 
+}
+/* .hight{
+  position: relative;
+  min-height: 100vh;
+} */
+.push{
+  margin: 150px ;
+}
+
 
 

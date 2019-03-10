@@ -12,12 +12,11 @@ const NavBar = () =>{
     <div>
       <nav className="navbar navbar-dark bg-dark ">
           <div className="container">
-             {/* <Link className="navbar-brand" to="/">{logo}</Link> */}
-             <h1 className="navbar-brand">{logo}</h1>
+             <Link className="navbar-brand" to="/">{logo}</Link>
                 <div>
                     <div className="col-sm-5">
                         <div className="round">
-                            <div className="text-center">WA</div>
+                            <div className="text-center"><Link to="/AboutMe">WA</Link></div>
                         </div>
     	            </div>
                 </div> 

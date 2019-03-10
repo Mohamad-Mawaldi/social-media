@@ -10,26 +10,8 @@ const PostList = (props) => {
 <div>
     <PostItem/>
     <PostItem/>
-
-
+    <PostItem/>
 </div>
   );
 };
 export default PostList;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

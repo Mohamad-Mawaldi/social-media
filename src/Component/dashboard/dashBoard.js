@@ -5,7 +5,7 @@ import PostList from '../post/postList';
 
 const DashBoard = () => {
   return (
-      <div>
+      <div className="hight">
        <div className="container">
        <div className="new-post">
 
@@ -15,11 +15,11 @@ const DashBoard = () => {
                     <div className="mt-3"><h4>Add New Post</h4></div>
                 </div>
 
-                <div class="form-group row">
+                <div className="form-group row">
                     <input  placeholder="Enter Title here" className="form-control" type="text" />
                 </div>
 
-                <div class="form-group row">
+                <div className="form-group row">
                     <textarea  rows="2" className="form-control" placeholder="Enter Content here"/>
                 </div>
                 <button type="button" className="btn btn-primary btn-lg btn-block">Add</button>
@@ -29,6 +29,7 @@ const DashBoard = () => {
        <div className=" col-md-7 mx-auto">
     <PostList/>
     </div>
+    <div className="push" />
 </div>
 </div>
 
