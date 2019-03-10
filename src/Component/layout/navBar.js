@@ -14,7 +14,6 @@ const NavBar = () =>{
           <div className="container">
              {/* <Link className="navbar-brand" to="/">{logo}</Link> */}
              <h1 className="navbar-brand">{logo}</h1>
-
                 <div>
                     <div className="col-sm-5">
                         <div className="round">

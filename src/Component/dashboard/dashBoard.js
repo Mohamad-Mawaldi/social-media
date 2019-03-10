@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PostList from '../post/postList';
 //connect the router
 
 const DashBoard = () => {
   return (
-   <div className="new-post">
+      <div>
        <div className="container">
+       <div className="new-post">
+
             <div className=" col-md-5 mx-auto">
             
                 <div className="form-group row">
@@ -22,7 +25,12 @@ const DashBoard = () => {
                 <button type="button" className="btn btn-primary btn-lg btn-block">Add</button>
             </div>
        </div>
-   </div>
+
+       <div className=" col-md-7 mx-auto">
+    <PostList/>
+    </div>
+</div>
+</div>
 
 
   );

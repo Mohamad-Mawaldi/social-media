@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import NavBar from '../Component/layout/navBar';
 import Footer from '../Component/layout/footer';
+import DashBoard from '../Component/dashboard/dashBoard';
+
 
 
 class App extends Component {
@@ -9,6 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar/>
+        <DashBoard/>
         <Footer/>
 
 
