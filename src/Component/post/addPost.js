@@ -3,11 +3,9 @@ import React, { Component } from "react";
 
 export default class AddPost extends Component {
   state = {
-    title: "",
     id:0,
-    content: "",
-    author: "WA",
-    status:"good"
+    title: "",
+    content: ""
   };
 
   handleChange = e => {
@@ -20,11 +18,7 @@ export default class AddPost extends Component {
     e.preventDefault();
     console.log(e);
     console.log('state', this.state);
-    this.props.addPost([this.state.title,
-                        this.state.id,
-                        this.state.content,
-                        this.state.author,
-                        this.state.status]);
+    this.props.addPost( this.state.title,this.state.content,this.state.id );
 
   };
 

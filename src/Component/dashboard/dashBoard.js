@@ -14,12 +14,18 @@ export default class DashBoard extends Component {
         {title:'Fourth Post', id: '4', content:'Fourth Post post my friends', author:'NR', status:'Bad'}]
     }
 
-     addPost = ([title,id,content,author,status]) => {
+     addPost = (title,content,id) => {
         console.log('called');
-        console.log('post', [title,id,author,content,status]);
-        // this.state.posts.push({title: title, id : id, content:content, author : author, status : status});
+        console.log('heeee', title,id,content);
+        const postArray = this.state.posts;
+        postArray.push({title: title, id : id, content:content, author : "MM", status : "Bad"});
 
-        this.setState( [...state.posts, {title: title, id : id, content:content, author : author, status : status} );
+        // this.state.posts.push({title: title, id : id, content:content, author : author, status : status});
+        this.setState({
+          posts:postArray
+        });
+
+        //this.setState( [...state.posts, {title: title, id : id, content:content, author : author, status : status} );
           
         console.log('posts', this.state)
     }
