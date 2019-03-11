@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 //connect the router
 
 
-const PostItem = (props) => {
+const PostItem = ({post}) => {
 
   return (
+      
     <div className="m-4">
         <div className="card gedf-card">
     <div className="card-header">
@@ -14,25 +15,28 @@ const PostItem = (props) => {
                 <div className="mr-2">
                 <div className="col-sm-5">
                         <div className="round">
-                            <div className="text-center">WA</div>
+                            <div className="text-center">{post.author}</div>
                         </div>
     	            </div>
                 </div>
                 <div className="ml-2">
-                <h5 className="card-title">Lorem ipsum dolor sit amet, consectetur adip.</h5>
+                <h5 className="card-title">{post.title}</h5>
                 </div>
-            </div>
+
+                {/* <div>
+                <i className="fas fa-backspace"></i>
+                </div> */}
+
+
+               </div>
         </div>
     
     </div>
     <div className="card-body">
-        <p className="card-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo recusandae nulla rem eos ipsa praesentium esse magnam nemo dolor
-            sequi fuga quia quaerat cum, obcaecati hic, molestias minima iste voluptates.
-        </p>
+        <p className="card-text">{post.content}</p>
     </div>
     <div className="card-footer">
-        {/* {this.props.status} */}
+        {post.status}
     </div>
     </div>
     </div>

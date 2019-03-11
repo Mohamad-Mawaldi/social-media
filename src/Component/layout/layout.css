@@ -48,12 +48,12 @@
     color: #fff; 
 
 }
-a{
+.round a{
   text-decoration: none;
-  color: #fff !important;
+  color: #fff;
 
 }
-a:hover {
+.round a:hover {
   text-decoration: none;
   color: #fff; 
 }

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import PostList from "../post/postList";
-import AddPost from "./addPost";
+import AddPost from "../post/addPost";
 
 //connect the router
 
@@ -15,10 +14,13 @@ export default class DashBoard extends Component {
         {title:'Fourth Post', id: '4', content:'Fourth Post post my friends', author:'NR', status:'Bad'}]
     }
 
-     addPost = ([title,content,author]) => {
+     addPost = ([title,id,content,author,status]) => {
         console.log('called');
-        console.log('post', [title,content,author]);
-        this.state.posts.push([title,content,author]);
+        console.log('post', [title,id,author,content,status]);
+        // this.state.posts.push({title: title, id : id, content:content, author : author, status : status});
+
+        this.setState( [...state.posts, {title: title, id : id, content:content, author : author, status : status} );
+          
         console.log('posts', this.state)
     }
 

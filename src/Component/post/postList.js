@@ -4,13 +4,18 @@ import PostItem from './postItem'
 
 //connect the router
 
-const PostList = (props) => {
+const PostList = ({posts}) => {
   return (
    
 <div>
-    <PostItem/>
-    <PostItem/>
-    <PostItem/>
+{ posts && posts.map( post => {
+      console.log('value', post)
+      return ( 
+        <Link to={'/post/' +post.id } key={post.id}>
+        <PostItem post={post}/>
+        </Link>
+        )
+    })}
 </div>
   );
 };
