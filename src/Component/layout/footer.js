@@ -1,7 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 import './layout.css';
-//connect the router
 
 
 
