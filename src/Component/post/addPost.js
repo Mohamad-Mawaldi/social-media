@@ -3,7 +3,6 @@ import React, { Component } from "react";
 
 export default class AddPost extends Component {
   state = {
-    id: 0,
     title: "",
     content: ""
   };
@@ -18,7 +17,7 @@ export default class AddPost extends Component {
     e.preventDefault();
     console.log(e);
     console.log('state', this.state);
-    this.props.addPost( this.state.title,this.state.content,this.state.id );
+    this.props.addPost( this.state.title,this.state.content);
 
   };
 

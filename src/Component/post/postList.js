@@ -12,7 +12,7 @@ const PostList = ({posts,deletePost}) => {
       console.log('value', post)
       return ( 
         // <Link to={'/post/' +post.id } key={post.id}>
-        <PostItem post={post} deletePost={deletePost}/>
+        <PostItem post={post} deletePost={deletePost} key={post.id}/>
         // </Link>
         )
     })}

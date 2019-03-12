@@ -14,13 +14,15 @@ export default class DashBoard extends Component {
         {title:'Fourth Post', id: 4, content:'Fourth Post post my friends', author:'NR', status:'Bad'}]
     }
 
-     addPost = (title,content,id) => {
+     addPost = (title,content) => {
         console.log('called');
-        console.log('heeee', title,id,content);
-        const postArray = [...this.state.posts]
+        console.log('heeee', title,content);
+        const postArray = [...this.state.posts];
+        const id = postArray.length
         postArray.push({title: title, id : id, content:content, author : "MM", status : "Bad"});
         this.setState({ posts:postArray });
         console.log('posts', this.state)
+       console.log('postArray.length', postArray.length)
     }
 
     deletePost = (id) =>{
