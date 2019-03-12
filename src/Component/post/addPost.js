@@ -3,7 +3,7 @@ import React, { Component } from "react";
 
 export default class AddPost extends Component {
   state = {
-    id:0,
+    id: 0,
     title: "",
     content: ""
   };

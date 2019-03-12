@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 //connect the router
 
 
-const PostItem = ({post}) => {
+const PostItem = ({post,deletePost}) => {
+
+ 
 
   return (
       
@@ -23,9 +25,9 @@ const PostItem = ({post}) => {
                 <h5 className="card-title">{post.title}</h5>
                 </div>
 
-                {/* <div>
+                <div onClick={()=>{deletePost(post.id)}}>
                 <i className="fas fa-backspace"></i>
-                </div> */}
+                </div>
 
 
                </div>
